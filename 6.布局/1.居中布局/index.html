@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平居中布局</title>
+</head>
+
+<body>
+    <!-- 含义：指当前元素在父级元素容器中，水平方向是居中显示的 -->
+    <!-- 1：文本/行内元素/行内级块元素
+            原理：text-align：center 只控制行内内容
+    -->
+    <!-- 2：单个块元素：
+            原理：在margin: 0 auto;
+     -->
+
+    <!-- 3：多个块级元素 
+            原理：把块元素转换为行内块元素（display:inline-block）让其对text-align生效
+      -->
+    <!-- 4：使用决定定位实现 -->
+    <!-- 5：任意个元素 flex
+            原理：设置当前主轴对齐方式为居中
+    -->
+
+    <!-- 垂直居中 -->
+    <!-- 1:单行文本/行内元素/行内块元素 
+            原理：line-height：高；
+     -->
+
+    <!-- 2：图片垂直居中
+            原理：vertical-align：middle;
+      -->
+
+    <!-- 3:单个块元素
+            原理：使用display: table-cell; vertical-align：middle;
+            或 绝对定位
+            或 flex
+        -->
+
+</body>
+
+</html>
