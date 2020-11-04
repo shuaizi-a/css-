@@ -4,27 +4,33 @@
 + 利于float + margin实现
 ```html
 <style>
-    *{margin:0; padding:0};
-
-    #left{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #cccccc;
-        float: left; /* 重点 */
+    * {
+      margin: 0;
+      padding: 0
     }
 
-    #comter{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #fff;
-        float: left; /* 重点 */
+    #left {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: #cccccc;
+      float: left;
+      /* 重点 */
     }
 
-    #right{
-        width: 100%;
-        height: 100%;
-        background: #c9394a;
-        margin-left: 400px;
+    #conter {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: #0e9109;
+      float: left;
+      /* 重点 */
+    }
+
+    #right {
+      height: 300px;
+      background: #c9394a;
+      margin-left: 800px;
     }
 </style>
 <body>
@@ -37,29 +43,36 @@
 + 使用float + overflow实现
 ```html
 <style>
-    *{margin:0; padding:0};
-
-    #left{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #cccccc;
-        float: left; /* 重点 */
+    * {
+      margin: 0;
+      padding: 0
     }
 
-    #comter{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #fff;
-        float: left; /* 重点 */
+    #left {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: #0de43c;
+      float: left;
+      /* 重点 */
     }
 
-    #right{
-        width: 100%;
-        height: 100%;
-        background: #c9394a;
-        
-        /* BFC：形成一个隔离元素 条件之一 */
-        overflow: hidden; /* 溢出隐藏 */
+    #conter {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: rgb(51, 10, 236);
+      float: left;
+      /* 重点 */
+    }
+
+    #right {
+      height: 300px;
+      background: #c9394a;
+
+      /* BFC：形成一个隔离元素 条件之一 */
+      overflow: hidden;
+      /* 溢出隐藏 */
     }
 </style>
 <body>
@@ -72,37 +85,39 @@
 + 使用table + tabel-cell实现
 ```html
 <style>
-    *{margin:0; padding:0};
-    
-    #parent{
-        width: 100%;
-        display: table;
+    * {
+      margin: 0;
+      padding: 0
     }
 
-    #left{
-        display: table-cell;
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #cccccc;
-        float: left; /* 重点 */
+    #parent {
+      width: 100%;
+      display: table;
     }
 
-    #comter{
-        display: table-cell;
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #fff;
-        float: left; /* 重点 */
+    #left {
+      display: table-cell;
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: #420bda;
+      float: left;
+      /* 重点 */
     }
 
-    #right{
-        display: table-cell;
-        width: 100%;
-        height: 100%;
-        background: #c9394a;
-        
-        /* BFC：形成一个隔离元素 条件之一 */
-        overflow: hidden; /* 溢出隐藏 */
+    #conter {
+      display: table-cell;
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: rgb(82, 194, 31);
+      float: left;
+      /* 重点 */
+    }
+
+    #right {
+      height: 300px;
+      background: #ca1026;
     }
 </style>
 <body>
@@ -118,31 +133,35 @@
 + 使用flex属性实现
 ```html
 <style>
-    *{margin:0; padding:0};
-
-    #parent{
-        width: 100%;
-        height: 100%
-        display: flex;
+    * {
+      margin: 0;
+      padding: 0
     }
 
-    #left{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #cccccc;
+    #parent {
+      width: 100%;
+      height: 300px;
+      display: flex;
     }
 
-    #comter{
-        width: 400px; /* 定宽 */
-        height: 100%;
-        background: #fff;
-        float: left; /* 重点 */
+    #left {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: #ff0080;
     }
 
-    #right{
-        flex: 1;
-        height: 100%;
-        background: #c9394a;
+    #conter {
+      width: 400px;
+      /* 定宽 */
+      height: 300px;
+      background: rgb(58, 248, 0);
+    }
+
+    #right {
+      flex: 1;
+      height: 300px;
+      background: #c9394a;
     }
 </style>
 <body>
@@ -159,28 +178,29 @@
 <style>
     *{margin:0; padding:0};
 
-    #parent{
-        width: 100%;
-        height: 100%
-        display: grid;
-        /* 每个列的宽度左400 右自适应 */
-        grid-template-columns: 400px 400px auto;
+    #parent {
+      width: 100%;
+      height: 300px;
+      display: grid;
+      /* 每个列的宽度左400 右自适应 */
+      grid-template-columns: 400px 400px auto;
     }
 
-    #left{
-        height: 100%;
-        background: #cccccc;
-    }
-    
-    #comter{
-        height: 100%;
-        background: #fff;
-        float: left; /* 重点 */
+    #left {
+      height: 300px;
+      background: #01ff01;
     }
 
-    #right{
-        height: 100%;
-        background: #c9394a;
+    #conter {
+      height: 300px;
+      background: rgb(255, 0, 106);
+      float: left;
+      /* 重点 */
+    }
+
+    #right {
+      height: 300px;
+      background: #c9394a;
     }
 </style>
 <body>
